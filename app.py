@@ -17,7 +17,7 @@ db.init_app(app)
 
 api_url = 'api/{}'.format(api_version)
 api.add_resource(Status, '/{}/status/<name>'.format(api_url))
-api.add_resource(Uptime, '/{}/uptime.py/<name>'.format(api_url))
+api.add_resource(Uptime, '/{}/uptime/<name>'.format(api_url))
 
 if __name__ == '__main__':
     app.run(debug=True)
